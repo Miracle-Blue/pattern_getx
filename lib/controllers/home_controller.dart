@@ -6,12 +6,14 @@ import 'package:pattern_getx/pages/create_edit_page.dart';
 class HomeController extends GetxController {
   var isLoading = false.obs;
   var items = <Post>[].obs;
-  TextEditingController titleController = TextEditingController();
-  TextEditingController bodyController = TextEditingController();
+  late TextEditingController titleController;
+  late TextEditingController bodyController;
 
   @override
   void onInit() {
     super.onInit();
+    titleController = TextEditingController();
+    bodyController = TextEditingController();
     apiPostLoadList();
   }
 
