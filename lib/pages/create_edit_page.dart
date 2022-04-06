@@ -18,8 +18,8 @@ class CreateEditPage extends StatelessWidget {
           TextButton(
             onPressed: () {
               post != null
-                  ? controller!.apiPostEdit(context, post!)
-                  : controller!.apiPostCreate(context);
+                  ? controller!.apiPostEdit(post!)
+                  : controller!.apiPostCreate();
             },
             child: Text(
               post != null ? "Save" : "Create",

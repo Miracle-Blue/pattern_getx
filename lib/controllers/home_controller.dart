@@ -50,7 +50,7 @@ class HomeController extends GetxController {
     apiPostLoadList();
   }
 
-  void apiPostCreate(BuildContext context) async {
+  void apiPostCreate() async {
     isLoading.value = true;
 
     Post newPost = Post();
@@ -73,7 +73,7 @@ class HomeController extends GetxController {
     }
   }
 
-  Future<void> apiPostEdit(BuildContext context, Post post) async {
+  Future<void> apiPostEdit(Post post) async {
     isLoading.value = true;
 
     post.title = titleController.text.trim().toString();
